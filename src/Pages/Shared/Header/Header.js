@@ -5,7 +5,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { signOut } from 'firebase/auth';
 import { Button} from 'react-bootstrap';
-import logo from '../../../images/logo.png'
+// import logo from '../../../images/logo.png'
 
 const Header = () => {
 
