@@ -5,6 +5,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { signOut } from 'firebase/auth';
 import { Button} from 'react-bootstrap';
+import logo from '../../../images/logo.png'
 
 const Header = () => {
 
@@ -18,11 +19,11 @@ const Header = () => {
         <>
         <Navbar bg="light" variant="light">
           <Container>
-          <Navbar.Brand href="home">Happy Clicking</Navbar.Brand>
+          <Navbar.Brand as={Link} to="home">Happy Clicking</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         
           <Nav className="me-auto">
-            <Nav.Link href="home">Home</Nav.Link>
+            <Nav.Link as={Link} to="home">Home</Nav.Link>
             <Nav.Link href="home#services">Services</Nav.Link>
         
           </Nav>
@@ -42,6 +43,8 @@ const Header = () => {
             </Nav>
           </Container>
         </Navbar>
+
+        
       </>
     );
 };

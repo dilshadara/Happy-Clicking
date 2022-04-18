@@ -1,6 +1,6 @@
 [
     {
-        "id":"3b911b8e-dc47-4c55-863b-1fef47f117b1",
+        "id":"1",
         "name": "Portrait",
         "price":500,
         "duration":"4 hours",
@@ -9,7 +9,7 @@
         
     },
     {
-        "id":"3b911b8e-dc47-4c55-863b-1fef47f1237b1",
+        "id":"2",
         "name": "Event",
         "price":1400,
         "duration":"6 hours",
@@ -18,7 +18,7 @@
         
     },
     {
-        "id":"3b911b8e-dc47-4c55-863b-1fef5677f117b1",
+        "id":"3",
         "name": "Family",
         "price":1500,
         "duration":"8 hours",
@@ -27,7 +27,7 @@
         
     },
     {
-        "id":"3b911b8e-dc47-4c55-863b-1fe99947f117b1",
+        "id":"4",
         "name": "Real Estate",
         "price":1000,
         "duration":"4 hours",
@@ -36,7 +36,7 @@
         
     },
     {
-        "id":"3b911b8e-dc47-4c55-863b-1fef78907f117b1",
+        "id":"5",
         "name": "Product",
         "price":400,
         "duration":"3 hours",
@@ -45,7 +45,7 @@
         
     },
     {
-        "id":"3b911b8e-dc47-4c55-863b-1fef33347f117b1",
+        "id":"6",
         "name": "Graduation",
         "price":200,
         "duration":"2 hours",
