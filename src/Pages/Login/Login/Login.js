@@ -5,6 +5,7 @@ import './Login.css';
 import { useSignInWithEmailAndPassword, useSendPasswordResetEmail  } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 // import { toast } from 'react-toastify';
 // import 'react-toastify/dist/ReactToastify.css';
@@ -96,6 +97,7 @@ const Login = () => {
         <p className='text-danger mt-1'>{err} {errorElement}</p>
         <p className='mt-2'>New to Happy Clicking? <Link to="/register" className='text-decoration-none fw-bold text-color' onClick={navigateRegister}>Please Register</Link></p>
         <p>Forgot password?<Button className='bg-color ms-2' onClick={resetPassword}>Reset Password</Button></p>
+        <SocialLogin></SocialLogin>
     </div>
     );
 };
