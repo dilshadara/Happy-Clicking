@@ -1,9 +1,16 @@
 .footer {
     background-color: #758283;
     color: white;
-    /* position: fixed; */
-    bottom: 0;
+    /* position: absolute;
+    bottom: 0; */
     display: flex;
     justify-content: space-between;
-    padding: 20px 40px;
+    padding: 0px 20px;
+    width: 100%;
+    height: 80px;
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
