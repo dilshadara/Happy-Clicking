@@ -5,8 +5,8 @@ const CheckOut = () => {
     const {serviceId} =useParams();
     return (
         <div>
-            <h1>from Check out</h1>
-           <h2>this is service detail page {serviceId}</h2>
+            <h3>Check out package</h3>
+           <h5>this is service detail page {serviceId}</h5>
         </div>
     );
 };

@@ -2,4 +2,9 @@
     border: 1px solid #758283;
     padding: 10px;
     text-align: center;
+    border-radius: 8px;
+}
+
+.service img {
+    border-radius: 8px;
 }
