@@ -10,7 +10,7 @@ const Footer = () => {
         <div className='footer w-100'>
             <div>
                 <h2>What are you waiting for?</h2>
-                <p>Book your slot now to cherish your memories forever</p>
+                <p>Book your slot now to cherish your memories forever.</p>
             </div>
             <div>
                 <p>&copy; Dilshad Ara {year}</p>
