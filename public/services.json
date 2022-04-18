@@ -1,11 +1,11 @@
 [
     {
         "id":"1",
-        "name": "Portrait",
+        "name": "Couple",
         "price":500,
         "duration":"4 hours",
-        "img":"./img/neckpiece1.png",
-        "description":""
+        "img":"./img/Couple.jpg",
+        "description":"Exclusive couple photo offers a photo shoot as per your desired location. Travel cost excluded."
         
     },
     {
@@ -13,8 +13,8 @@
         "name": "Event",
         "price":1400,
         "duration":"6 hours",
-        "img":"./img/neckpiece1.png",
-        "description":""
+        "img":"./img/event.jpg",
+        "description":"You can confidently depend on me to capture your any events to cherish life long."
         
     },
     {
@@ -22,8 +22,8 @@
         "name": "Family",
         "price":1500,
         "duration":"8 hours",
-        "img":"./img/neckpiece1.png",
-        "description":""
+        "img":"./img/family.jpg",
+        "description":"This is most popular services among al the offers. Hire me for a lovely photo shoot of your kids, and elders."
         
     },
     {
@@ -31,17 +31,17 @@
         "name": "Real Estate",
         "price":1000,
         "duration":"4 hours",
-        "img":"./img/neckpiece1.png",
-        "description":""
+        "img":"./img/RealEstate.jpg",
+        "description":"Do not forget me to take a eye catching  picture of your property to attract a client more easily."
         
     },
     {
         "id":"5",
-        "name": "Product",
+        "name": "food",
         "price":400,
         "duration":"3 hours",
-        "img":"./img/neckpiece1.png",
-        "description":""
+        "img":"./img/food.jpg",
+        "description":"If you are foody, or food blogger or want to open a restaurant, and need to show your delicacy...remember me."
         
     },
     {
@@ -49,8 +49,8 @@
         "name": "Graduation",
         "price":200,
         "duration":"2 hours",
-        "img":"./img/neckpiece1.png",
-        "description":""
+        "img":"./img/graduation.jpg",
+        "description":"This is the most important day of your life. To living this day all of life, nothing can beat a picture that talks for you. "
         
     }
 ]
