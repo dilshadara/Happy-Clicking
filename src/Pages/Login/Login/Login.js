@@ -2,9 +2,12 @@ import React,{useState} from 'react';
 import {Form, Button} from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Login.css';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useSendPasswordResetEmail  } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
+
+// import { ToastContainer, toast } from 'react-toastify';
+
 
 
 const Login = () => {
@@ -27,11 +30,17 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
-    if (loading) {
+    const [sendPasswordResetEmail, sending,errorResetPassword] = useSendPasswordResetEmail(auth);
+
+    if (loading || sending) {
         return <Loading></Loading>;
       }
   
       if (error) {
+        errorElement = <p className='text-danger'>{error?.message}</p>
+      }
+
+      if (errorResetPassword) {
         errorElement = <p className='text-danger'>{error?.message}</p>
       }
 
@@ -45,15 +54,23 @@ const Login = () => {
         const email=event.target.email.value;
         const password = event.target.password.value;
        
-  
         if(password.length<6){
           setErr('Password should be at least 6 characters long.');
           return;
         }
   
         signInWithEmailAndPassword(email, password);
-       
-  
+      }
+
+      const resetPassword = async (event) => {
+        const email = event.target.email.value;
+        if(email){
+          await sendPasswordResetEmail(email);
+          // toast('Sent email');
+        }
+        else{
+          // toast('please enter your email address');
+        }
       }
 
     return (
@@ -72,6 +89,7 @@ const Login = () => {
         </Form>
         <p className='text-danger mt-1'>{err} {errorElement}</p>
         <p className='mt-2'>New to Click By Me? <Link to="/register" className='text-decoration-none fw-bold text-color' onClick={navigateRegister}>Please Register</Link></p>
+        <p>Forgot password?<button onClick={resetPassword}>Reset Password</button></p>
     </div>
     );
 };
