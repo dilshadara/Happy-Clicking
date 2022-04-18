@@ -19,11 +19,11 @@ const Header = () => {
         <>
         <Navbar bg="light" variant="light">
           <Container>
-          <Navbar.Brand as={Link} to="home">Happy Clicking</Navbar.Brand>
+          <Navbar.Brand as={Link} to="home" style={{fontWeight:'bold'}}>Happy Clicking</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="home">Home</Nav.Link>
+            {/* <Nav.Link as={Link} to="home">Home</Nav.Link> */}
             <Nav.Link href="home#services">Services</Nav.Link>
         
           </Nav>

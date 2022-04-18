@@ -1,6 +1,7 @@
-.container {
+.container-all-services {
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 
 
 }
@@ -10,7 +11,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     /* padding-bottom: 200px; */
-    margin-bottom: 20px;
+    margin-bottom: 150px;
 }
 
 .container h1 {
