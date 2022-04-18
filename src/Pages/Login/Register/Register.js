@@ -3,16 +3,31 @@ import {Form, Button} from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Loading/Loading';
 
 
 const Register = () => {
 
-  const [error, setError]=useState('');
-  const [createUserWithEmailAndPassword] = useCreateUserWithEmailAndPassword(auth);
+  const [err, setErr]=useState('');
+
+  let errorElement;
+
+  const [createUserWithEmailAndPassword,
+    loading,
+    error,
+  ] = useCreateUserWithEmailAndPassword(auth);
 
   const navigate = useNavigate();
     const navigateRegister = () =>{
         navigate('/login');
+    }
+
+    if (loading) {
+      return <Loading></Loading>;
+    }
+
+    if (error) {
+      errorElement = <p className='text-danger'>{error?.message}</p>
     }
 
     const handleRegister = (event) => {
@@ -22,18 +37,18 @@ const Register = () => {
       const confirmPassword = event.target.confirmPassword.value;
 
       if(password.length<6){
-        setError('Password should be at least 6 characters long.');
+        setErr('Password should be at least 6 characters long.');
         return;
       }
 
       if(password !== confirmPassword){
-        setError('Password does not match.');
+        setErr('Password does not match.');
         console.log(password,confirmPassword);
         return;
       }
 
       createUserWithEmailAndPassword(email,password);
-
+      navigate('/');
 
     }
 
@@ -54,7 +69,7 @@ const Register = () => {
             Register
             </Button>
         </Form>    
-     <p className='text-danger mt-1'>{error}</p>
+     <p className='text-danger mt-1'>{err} {errorElement}</p>
      <p className='mt-2'>Already have an account? <Link to="/login" className='text-decoration-none fw-bold text-color' onClick={navigateRegister}>Please Login</Link></p>
  </div>
     );
