@@ -1,0 +1,13 @@
+.banner {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    margin-top: 25px;
+    /* text-align: left; */
+    padding: 10px 80px;
+
+
+}
+
+.banner-img {
+    text-align: right;
+}
