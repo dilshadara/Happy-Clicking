@@ -4,13 +4,14 @@ import {Navbar,Container,Nav} from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { signOut } from 'firebase/auth';
+import { Button} from 'react-bootstrap';
 
 const Header = () => {
 
   const [user] = useAuthState(auth);
 
-  const logout =() =>{
-    signOut();
+  const handleSignOut =() =>{
+    signOut(auth);
   }
 
     return (
@@ -25,15 +26,20 @@ const Header = () => {
             <Nav.Link href="home#services">Services</Nav.Link>
         
           </Nav>
-          <Nav><Nav.Link as={Link} to="about">About</Nav.Link></Nav>
-          <Nav><Nav.Link as={Link} to="blogs">Blog</Nav.Link></Nav>
-          { user?
-            <div>
-              <p>user.email</p>
-              <button onClick={logout}>Log Out</button>
-            </div>
-            :
-            <Nav><Nav.Link as={Link} to="login">Login</Nav.Link></Nav>}
+          <Nav>
+              <Nav.Link as={Link} to="about">About</Nav.Link>
+              <Nav.Link as={Link} to="blogs">Blog</Nav.Link>
+              {
+                user?
+                  
+                  <Button onClick={handleSignOut} className='bg-color'>
+                  Sign Out
+                  </Button>
+                  :
+                 <Nav.Link as={Link} to="login">Login</Nav.Link>
+              }
+             
+            </Nav>
           </Container>
         </Navbar>
       </>
