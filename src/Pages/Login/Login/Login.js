@@ -6,6 +6,9 @@ import { useSignInWithEmailAndPassword, useSendPasswordResetEmail  } from 'react
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 // import { toast } from 'react-toastify';
 // import 'react-toastify/dist/ReactToastify.css';
@@ -71,12 +74,12 @@ const Login = () => {
         console.log(email);
         if(email){
           await sendPasswordResetEmail(email);
-          // toast('Sent email');
-          alert('Sent email');
+          toast('Sent email');
+          // alert('Sent email');
         }
         else{
-          alert('please enter your email address');
-          // toast('please enter your email address');
+          // alert('please enter your email address');
+          toast('please enter your email address');
         }
       }
 
@@ -98,6 +101,7 @@ const Login = () => {
         <p className='mt-2'>New to Happy Clicking? <Link to="/register" className='text-decoration-none fw-bold text-color' onClick={navigateRegister}>Please Register</Link></p>
         <p>Forgot password?<Button className='bg-color ms-2' onClick={resetPassword}>Reset Password</Button></p>
         <SocialLogin></SocialLogin>
+        <ToastContainer />
     </div>
     );
 };
