@@ -1,0 +1,23 @@
+/* make services responsive */
+/* for mobile */
+@media only screen and (max-width:576px) {
+    .special {
+        grid-template-columns: repeat(1, 1fr);
+
+
+    }
+
+    .ul1 {
+        margin: 0px;
+        padding: 0px;
+
+    }
+
+    .ul2 {
+        margin-top: -15px;
+        padding-top: 0px;
+    }
+
+
+
+}
