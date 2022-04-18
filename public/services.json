@@ -1,50 +1,56 @@
 [
     {
         "id":"3b911b8e-dc47-4c55-863b-1fef47f117b1",
-        "service": "Portrait",
-        "price":1400,
+        "name": "Portrait",
+        "price":500,
         "duration":"4 hours",
-        "img":"./img/neckpiece1.png"
+        "img":"./img/neckpiece1.png",
+        "description":""
         
     },
     {
         "id":"3b911b8e-dc47-4c55-863b-1fef47f1237b1",
-        "service": "Event",
+        "name": "Event",
         "price":1400,
         "duration":"6 hours",
-        "img":"./img/neckpiece1.png"
+        "img":"./img/neckpiece1.png",
+        "description":""
         
     },
     {
         "id":"3b911b8e-dc47-4c55-863b-1fef5677f117b1",
-        "service": "Family",
-        "price":1400,
+        "name": "Family",
+        "price":1500,
         "duration":"8 hours",
-        "img":"./img/neckpiece1.png"
+        "img":"./img/neckpiece1.png",
+        "description":""
         
     },
     {
         "id":"3b911b8e-dc47-4c55-863b-1fe99947f117b1",
-        "service": "Real Estate",
-        "price":1400,
+        "name": "Real Estate",
+        "price":1000,
         "duration":"4 hours",
-        "img":"./img/neckpiece1.png"
+        "img":"./img/neckpiece1.png",
+        "description":""
         
     },
     {
         "id":"3b911b8e-dc47-4c55-863b-1fef78907f117b1",
-        "service": "Product",
-        "price":1400,
+        "name": "Product",
+        "price":400,
         "duration":"3 hours",
-        "img":"./img/neckpiece1.png"
+        "img":"./img/neckpiece1.png",
+        "description":""
         
     },
     {
         "id":"3b911b8e-dc47-4c55-863b-1fef33347f117b1",
-        "service": "Graduation",
-        "price":1400,
+        "name": "Graduation",
+        "price":200,
         "duration":"2 hours",
-        "img":"./img/neckpiece1.png"
+        "img":"./img/neckpiece1.png",
+        "description":""
         
     }
 ]

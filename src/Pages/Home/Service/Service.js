@@ -1,18 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
-const Service = () => {
-
-    const [services, setServices] =useState([]);
-
-    useEffect(  () => {
-        fetch('services.json')
-        .then(res=> res.json())
-        .then(data=>console.log(data));
-    },[]);
-
+const Service = ({service}) => {
+    const {name,price} = service;
+    
     return (
         <div>
-            
+            <h5>{name}</h5>
+            <p>Package: ${price}</p>
         </div>
     );
 };
