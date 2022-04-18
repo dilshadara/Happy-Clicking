@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState, useRef} from 'react';
 import {Form, Button} from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Login.css';
@@ -6,12 +6,14 @@ import { useSignInWithEmailAndPassword, useSendPasswordResetEmail  } from 'react
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 
-// import { ToastContainer, toast } from 'react-toastify';
+// import { toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
 
 
 const Login = () => {
 
+  const emailRef = useRef('');
     const [err, setErr]=useState('');
     let errorElement;
 
@@ -63,12 +65,16 @@ const Login = () => {
       }
 
       const resetPassword = async (event) => {
-        const email = event.target.email.value;
+        // const email = event?.target?.email?.value;
+        const email = emailRef.current.value;
+        console.log(email);
         if(email){
           await sendPasswordResetEmail(email);
           // toast('Sent email');
+          alert('Sent email');
         }
         else{
+          alert('please enter your email address');
           // toast('please enter your email address');
         }
       }
@@ -78,7 +84,7 @@ const Login = () => {
          <h2 className='text-center pt-2 text-color'>Please Login</h2>   
         <Form onSubmit={handleLogin}>
             
-            <Form.Control type="email" name="email" placeholder="Enter email" required className='mb-3'/>
+            <Form.Control type="email" ref={emailRef} name="email" placeholder="Enter email" required className='mb-3'/>
            
             <Form.Control type="password" name="password" placeholder="Password" required className='mb-3'/>
           
@@ -88,8 +94,8 @@ const Login = () => {
             
         </Form>
         <p className='text-danger mt-1'>{err} {errorElement}</p>
-        <p className='mt-2'>New to Click By Me? <Link to="/register" className='text-decoration-none fw-bold text-color' onClick={navigateRegister}>Please Register</Link></p>
-        <p>Forgot password?<button onClick={resetPassword}>Reset Password</button></p>
+        <p className='mt-2'>New to Happy Clicking? <Link to="/register" className='text-decoration-none fw-bold text-color' onClick={navigateRegister}>Please Register</Link></p>
+        <p>Forgot password?<Button className='bg-color ms-2' onClick={resetPassword}>Reset Password</Button></p>
     </div>
     );
 };
