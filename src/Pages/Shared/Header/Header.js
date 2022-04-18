@@ -18,7 +18,7 @@ const Header = () => {
         <>
         <Navbar bg="light" variant="light">
           <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Navbar.Brand href="home">Happy Clicking</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         
           <Nav className="me-auto">
